@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="'Segoe UI', system-ui, sans-serif">
+
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#c97a10" stroke-width="1.3" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- ═══ FRAME & PANELS ═══ -->
+  <rect width="860" height="430" fill="#d9e4dc" rx="10"/>
+  <rect x="3" y="3" width="424" height="424" fill="#f4f8f5" rx="8"/>
+  <rect x="433" y="3" width="424" height="424" fill="#f4f8f5" rx="8"/>
+
+  <!-- ═══ PANEL TITLES ═══ -->
+  <text x="215" y="30" text-anchor="middle" font-size="13" font-weight="600" fill="#0F452D">Sparse sampling</text>
+  <text x="215" y="48" text-anchor="middle" font-size="11" fill="#5c7f6b">4 sensors — gaps in spatial coverage</text>
+  <text x="645" y="30" text-anchor="middle" font-size="13" font-weight="600" fill="#0F452D">Dense sampling</text>
+  <text x="645" y="48" text-anchor="middle" font-size="11" fill="#5c7f6b">13 sensors — full spatial coverage</text>
+
+  <!-- ═══════════════════════════════════════════
+       LEFT PANEL — feature centred at (215, 228)
+       ═══════════════════════════════════════════ -->
+
+  <!-- Level 1 outermost -->
+  <path d="M 42,218 C 50,110 130,62 218,68 C 308,62 380,112 386,224 C 379,338 307,382 215,376 C 119,384 44,334 42,218 Z"
+        fill="#dcf0e7" stroke="#7BBF8F" stroke-width="1.5"/>
+  <!-- Level 2 -->
+  <path d="M 70,220 C 77,132 143,92 215,96 C 289,92 352,132 357,224 C 351,312 284,350 215,346 C 144,352 72,310 70,220 Z"
+        fill="#c6e8d5" stroke="#4C9A6A" stroke-width="1.5"/>
+  <!-- Level 3 -->
+  <path d="M 102,223 C 108,156 163,122 215,126 C 269,122 324,156 329,226 C 323,296 268,330 215,326 C 162,333 105,295 102,223 Z"
+        fill="#b0dfc3" stroke="#3a8454" stroke-width="1.5"/>
+  <!-- Level 4 -->
+  <path d="M 134,226 C 137,168 177,141 215,144 C 254,141 295,168 299,228 C 295,287 254,313 215,309 C 176,315 135,286 134,226 Z"
+        fill="#98d4b0" stroke="#27703f" stroke-width="2"/>
+  <!-- Level 5 innermost -->
+  <path d="M 167,227 C 168,199 187,179 215,181 C 243,179 262,199 264,228 C 262,258 243,278 215,276 C 187,278 168,258 167,227 Z"
+        fill="#7fc79b" stroke="#165430" stroke-width="2"/>
+
+  <!-- Unsampled zone: hatch + warm tint -->
+  <ellipse cx="215" cy="228" rx="89" ry="75" fill="url(#hatch)" opacity="0.5"/>
+  <ellipse cx="215" cy="228" rx="89" ry="75" fill="#e07030" opacity="0.05"/>
+
+  <!-- Data gap pill label -->
+  <rect x="178" y="219" width="74" height="22" rx="11" fill="white" opacity="0.78"/>
+  <text x="215" y="234" text-anchor="middle" font-size="10" fill="#9e5210" font-weight="600">data gap</text>
+
+  <!-- Sparse sensor halos (amber, large — each covers only a corner) -->
+  <circle cx="112" cy="148" r="88" fill="#F5A623" opacity="0.08"/>
+  <circle cx="318" cy="152" r="88" fill="#F5A623" opacity="0.08"/>
+  <circle cx="106" cy="308" r="88" fill="#F5A623" opacity="0.08"/>
+  <circle cx="324" cy="306" r="88" fill="#F5A623" opacity="0.08"/>
+
+  <!-- 4 sparse sensor dots (larger, prominent) -->
+  <circle cx="112" cy="148" r="13" fill="none" stroke="#4C9A6A" stroke-width="1" stroke-dasharray="2.5,2.5" opacity="0.55"/>
+  <circle cx="112" cy="148" r="6"  fill="none" stroke="#165430" stroke-width="1.8"/>
+  <circle cx="112" cy="148" r="3.5" fill="#0F452D"/>
+
+  <circle cx="318" cy="152" r="13" fill="none" stroke="#4C9A6A" stroke-width="1" stroke-dasharray="2.5,2.5" opacity="0.55"/>
+  <circle cx="318" cy="152" r="6"  fill="none" stroke="#165430" stroke-width="1.8"/>
+  <circle cx="318" cy="152" r="3.5" fill="#0F452D"/>
+
+  <circle cx="106" cy="308" r="13" fill="none" stroke="#4C9A6A" stroke-width="1" stroke-dasharray="2.5,2.5" opacity="0.55"/>
+  <circle cx="106" cy="308" r="6"  fill="none" stroke="#165430" stroke-width="1.8"/>
+  <circle cx="106" cy="308" r="3.5" fill="#0F452D"/>
+
+  <circle cx="324" cy="306" r="13" fill="none" stroke="#4C9A6A" stroke-width="1" stroke-dasharray="2.5,2.5" opacity="0.55"/>
+  <circle cx="324" cy="306" r="6"  fill="none" stroke="#165430" stroke-width="1.8"/>
+  <circle cx="324" cy="306" r="3.5" fill="#0F452D"/>
+
+  <!-- ═══════════════════════════════════════════
+       RIGHT PANEL — feature centred at (645, 228)
+       ═══════════════════════════════════════════ -->
+
+  <!-- Level 1 outermost -->
+  <path d="M 472,218 C 480,110 560,62 648,68 C 738,62 810,112 816,224 C 809,338 737,382 645,376 C 549,384 474,334 472,218 Z"
+        fill="#dcf0e7" stroke="#7BBF8F" stroke-width="1.5"/>
+  <!-- Level 2 -->
+  <path d="M 500,220 C 507,132 573,92 645,96 C 719,92 782,132 787,224 C 781,312 714,350 645,346 C 574,352 502,310 500,220 Z"
+        fill="#c6e8d5" stroke="#4C9A6A" stroke-width="1.5"/>
+  <!-- Level 3 -->
+  <path d="M 532,223 C 538,156 593,122 645,126 C 699,122 754,156 759,226 C 753,296 698,330 645,326 C 592,333 535,295 532,223 Z"
+        fill="#b0dfc3" stroke="#3a8454" stroke-width="1.5"/>
+  <!-- Level 4 -->
+  <path d="M 564,226 C 567,168 607,141 645,144 C 684,141 725,168 729,228 C 725,287 684,313 645,309 C 606,315 565,286 564,226 Z"
+        fill="#98d4b0" stroke="#27703f" stroke-width="2"/>
+  <!-- Level 5 innermost -->
+  <path d="M 597,227 C 598,199 617,179 645,181 C 673,179 692,199 694,228 C 692,258 673,278 645,276 C 617,278 598,258 597,227 Z"
+        fill="#7fc79b" stroke="#165430" stroke-width="2"/>
+
+  <!-- Dense sensor halos (green, tight — overlapping = full coverage) -->
+  <circle cx="550" cy="145" r="50" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="612" cy="118" r="48" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="682" cy="120" r="48" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="744" cy="145" r="50" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="504" cy="228" r="50" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="575" cy="228" r="44" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="645" cy="228" r="42" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="715" cy="228" r="44" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="786" cy="228" r="50" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="549" cy="310" r="50" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="614" cy="324" r="48" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="682" cy="322" r="48" fill="#4C9A6A" opacity="0.08"/>
+  <circle cx="746" cy="310" r="50" fill="#4C9A6A" opacity="0.08"/>
+
+  <!-- 13 dense sensor dots (smaller, consistent) -->
+  <!-- Row 1 -->
+  <circle cx="550" cy="145" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="550" cy="145" r="2.5" fill="#0F452D"/>
+  <circle cx="612" cy="118" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="612" cy="118" r="2.5" fill="#0F452D"/>
+  <circle cx="682" cy="120" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="682" cy="120" r="2.5" fill="#0F452D"/>
+  <circle cx="744" cy="145" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="744" cy="145" r="2.5" fill="#0F452D"/>
+  <!-- Row 2 -->
+  <circle cx="504" cy="228" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="504" cy="228" r="2.5" fill="#0F452D"/>
+  <circle cx="575" cy="228" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="575" cy="228" r="2.5" fill="#0F452D"/>
+  <circle cx="645" cy="228" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="645" cy="228" r="2.5" fill="#0F452D"/>
+  <circle cx="715" cy="228" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="715" cy="228" r="2.5" fill="#0F452D"/>
+  <circle cx="786" cy="228" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="786" cy="228" r="2.5" fill="#0F452D"/>
+  <!-- Row 3 -->
+  <circle cx="549" cy="310" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="549" cy="310" r="2.5" fill="#0F452D"/>
+  <circle cx="614" cy="324" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="614" cy="324" r="2.5" fill="#0F452D"/>
+  <circle cx="682" cy="322" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="682" cy="322" r="2.5" fill="#0F452D"/>
+  <circle cx="746" cy="310" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/><circle cx="746" cy="310" r="2.5" fill="#0F452D"/>
+
+  <!-- ═══ CENTRE DIVIDER ═══ -->
+  <line x1="429" y1="10" x2="429" y2="415" stroke="#a8c0b0" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- ═══ BOTTOM LEGEND ═══ -->
+  <!-- Large sparse sensor -->
+  <circle cx="46" cy="415" r="6"   fill="none" stroke="#165430" stroke-width="1.8"/>
+  <circle cx="46" cy="415" r="3.5" fill="#0F452D"/>
+  <text x="58" y="419" font-size="9.5" fill="#3a4a40">Sensor — sparse</text>
+
+  <!-- Small dense sensor -->
+  <circle cx="186" cy="415" r="4.5" fill="none" stroke="#165430" stroke-width="1.5"/>
+  <circle cx="186" cy="415" r="2.5" fill="#0F452D"/>
+  <text x="197" y="419" font-size="9.5" fill="#3a4a40">Sensor — dense</text>
+
+  <!-- Amber halo swatch -->
+  <circle cx="326" cy="415" r="8" fill="#F5A623" opacity="0.22"/>
+  <text x="340" y="419" font-size="9.5" fill="#3a4a40">Sparse coverage zone</text>
+
+  <!-- Green halo swatch -->
+  <circle cx="480" cy="415" r="7" fill="#4C9A6A" opacity="0.25"/>
+  <text x="493" y="419" font-size="9.5" fill="#3a4a40">Dense coverage zone</text>
+
+  <!-- Hatch swatch -->
+  <rect x="614" y="409" width="14" height="12" fill="url(#hatch)" opacity="0.55" rx="2"/>
+  <text x="634" y="419" font-size="9.5" fill="#3a4a40">Unsampled area</text>
+
+  <!-- Contour line swatch -->
+  <line x1="746" y1="415" x2="768" y2="415" stroke="#3a8454" stroke-width="1.8"/>
+  <text x="774" y="419" font-size="9.5" fill="#3a4a40">Contour</text>
+
+</svg>

@@ -6,8 +6,8 @@
 # Home Page (index.html)
 
 ## Hero Section
-**Cwiri provides modular, scalable monitoring and modelling for peatland and woodland carbon projects**  
-Science-led MRV you can trust.
+**Modular, scalable, and adaptive monitoring and modelling for peatland and woodland carbon projects**  
+Science-led monitoring reporting and verification you can trust, no matter the budget.
 
 **Buttons:**  
 - Book a Call  
@@ -23,24 +23,24 @@ A short overview of our mission, our monitoring approach, and how Cwiri supports
 ## Pillars
 
 ### Monitoring
-Sensors and Earth Observation provide continuous, scalable insight into water table depth, peatland condition, and environmental change.
+On ground instrumentation and Earth Observation provide continuous, scalable insights into environmental metrics related to GHG balance, habitat condition, and restoration success.
 
 ### Modelling
-Validated carbon and hydrological models quantify emissions, restoration impact, and longterm landscape trajectories.
+Validated carbon and hydrological models quantify emissions, restoration impact, and longterm site trajectories.
 
 ### Reporting
-Dashboards and MRV outputs provide transparent, repeatable reporting aligned with the Peatland Code and Woodland Carbon Code.
+Dashboards and reporting outputs provide transparent, repeatable reporting aligned with the Peatland Code and Woodland Carbon Code.
 
 ---
 
 ## What We Deliver
-Cwiri provides tiered monitoring services that measure water table depth, track peatland condition, and estimate carbon emissions with increasing levels of confidence.  
-Our adaptive framework ensures your monitoring evolves with your landscape.
-
+Cwiri provides tiered monitoring services tailored to your project that matches the budget and level of assurance you desire.  
+Our adaptive framework ensures your monitoring evolves with the changing conditions, circumstances, and priorities of your project.
+Our approach maximises the cost effectiveness of your data, and makes sure you only pay for whats needed.
 ---
 
 ## How It Works
-- **Measure:** Continuous water table depth and environmental conditions using robust sensors.  
+- **Measure:** Continuous environmental conditions using robust sensing instrumentation.  
 - **Model:** Carbon emissions and hydrological change using validated ecological models and EO data.  
 - **Verify:** Transparent, repeatable outputs aligned with the Woodland Carbon Code and Peatland Code.  
 - **Improve:** Adaptive monitoring that re-evaluates sensor placement and model inputs over time.
@@ -56,7 +56,7 @@ Transparent, repeatable, and built for peatlands and UK nature-based systems.
 ---
 
 ## Why Cwiri Exists
-Carbon markets rely on trust — and trust requires evidence. Many platforms focus on ratings or high-level emissions modelling. Cwiri is different. We build MRV from the ground up, combining ecological rigour with modern data workflows to deliver monitoring that is transparent, repeatable, field-ready, and project-specific.
+Land based carbon projects rely on trust — and trust requires evidence. Many platforms focus on assumed condition changes or high-level emissions modelling without groundtruth. Cwiri is different. We build monitoring from the ground up. A startup of the UK Centre for Ecology and Hydrology (UKCEH), Cwiri was founded on decades of combined experiance in land-based GHG research science. Incorporating the scientific, technical, and operational elements within our research, our founders set out to faciliate better access in  combining ecological rigour with modern data workflows to deliver monitoring that is transparent, repeatable, field-ready, and project-specific.
 
 Cwiri began as a response to a real, sectorwide challenge. We came together for CivTech Challenge 10.6, working with the Woodland Carbon Code and Peatland Code to explore how monitoring, modelling, and verification could be made more efficient, transparent, and scalable. What started as a challenge brief quickly became a shared mission: to build MRV tools that genuinely support naturebased carbon projects and reduce uncertainty in the places where it matters most.
 
@@ -65,7 +65,12 @@ The experience didn’t just give us a problem to solve — it shaped us into a 
 ---
 
 ## Our Mission
-We build scienceled MRV that reflects how landscapes actually behave — transparent, adaptive, and grounded in real data.
+To enable every peatland and woodland carbon project to have access to scientifically backed monitoring methodologies, regardless of budget. 
+ 
+##How we deliver this
+
+We build science-led monitoring packages that are tiered according to their cost and the level of assurance they provide, and bespoke to each project. That way projects are in full control of their monitoring setups, and the adaptive nature of our monitoring framework means setups are always up to date, maximising value for money. 
+As scientists, we utilise our expertise to develop products that derive only the essential components of research technologies needed, so that costs to clients are kept low, without QA/QC ever being compormised. By being transparent, adaptive, and grounded in real data, our products reflects how landscapes actually behave.
 
 ---
 

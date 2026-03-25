@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cwiri | Client Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navbar.js" defer></script>
+    <script src="js/client-login.js" defer></script>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="login-widget-container">
+        <div class="login-widget">
+            
+            <!-- Toggle buttons -->
+            <div class="login-widget-tabs">
+                <button class="login-tab-btn active" data-tab="existing">
+                    <span class="tab-icon">🔓</span>
+                    <span class="tab-label">Existing User</span>
+                </button>
+                <button class="login-tab-btn" data-tab="request">
+                    <span class="tab-icon">📋</span>
+                    <span class="tab-label">Request Access</span>
+                </button>
+            </div>
+
+            <div class="login-tab-body">
+
+            <!-- Existing user tab -->
+            <div class="login-tab-content active" id="existing-tab">
+                <div class="login-tab-inner">
+                    <h2>Access Your Dashboard</h2>
+                    <p>
+                        Enter the secure portal to view real-time monitoring data, reports, and site analytics.
+                    </p>
+                    <div class="login-feature-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">📊</span>
+                            <span>Real-time sensor data</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📈</span>
+                            <span>Custom reports</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔒</span>
+                            <span>Site-level access control</span>
+                        </div>
+                    </div>
+                    <a class="btn-primary btn-large" href="https://portal.cwiri.co.uk" target="_blank" rel="noopener noreferrer">Go to Portal</a>
+                </div>
+            </div>
+
+            <!-- Request access tab -->
+            <div class="login-tab-content" id="request-tab">
+                <div class="login-tab-inner">
+                    <h2>Don't Have Access Yet?</h2>
+                    <p>
+                        If your project has just been commissioned or you need to set up a new account, let us know and we'll get you started.
+                    </p>
+                    <div class="request-info">
+                        <div class="info-step">
+                            <span class="info-number">1</span>
+                            <span class="info-text">Submit your request</span>
+                        </div>
+                        <div class="info-step">
+                            <span class="info-number">2</span>
+                            <span class="info-text">We'll verify your project</span>
+                        </div>
+                        <div class="info-step">
+                            <span class="info-number">3</span>
+                            <span class="info-text">Credentials sent to you</span>
+                        </div>
+                    </div>
+                    <a class="btn-secondary btn-large" href="contact.html">Request Portal Access</a>
+                </div>
+            </div>
+
+            </div><!-- /.login-tab-body -->
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        &copy; 2025 Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh, Scotland EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
+        &nbsp;|&nbsp; <a href="privacy.html">Privacy &amp; Cookies</a>
+    </footer>
+
+</body>
+</html>

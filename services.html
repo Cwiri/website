@@ -173,11 +173,14 @@
             
             <!-- Graphic (Silver tier example, but used conceptually) -->
             <figure class="product-figure">
-                <img src="images/products/product-exampleSilverGraphic.png" 
-                    alt="Example of spatial resolution improving with higher tiers">
+                <img src="images/products/product-spatial-density.svg"
+                    class="zoomable-img"
+                    alt="Comparison of sparse and dense sensor coverage across a landscape feature"
+                    title="Click to enlarge">
                 <figcaption>
-                    Higher tiers provide finer spatial resolution, capturing more of the landscape’s 
+                    Higher tiers provide finer spatial resolution, capturing more of the landscape's 
                     natural variability and improving model accuracy.
+                    <span class="zoom-hint">Click image to enlarge</span>
                 </figcaption>
             </figure>
 
@@ -220,7 +223,6 @@
         </div>
     </section>
 
-
     <!-- Detailed Tier Descriptions -->
     <section class="section card">
         <h2>What Each Tier Provides</h2>
@@ -253,6 +255,261 @@
         </p>
     </section>
 
+    <section class="section card dashboard-preview" id="dashboard-preview">
+        <h2>Dashboard Platform (Prototype)</h2>
+        <p>
+            Alongside field deployment and modelling, Cwiri is developing a client-facing dashboard platform.
+            The current version is an active prototype, designed to test workflow, usability, and panel structure
+            before first product release.
+        </p>
+        <p>
+            To protect partner confidentiality and verbal data-sharing agreements, we only use anonymised
+            prototype screenshots where locations and project identifiers are not determinable.
+        </p>
+        <p>
+            The current prototype is organised into top-level tabs including Study Site, Live Sensors,
+            Sensor Summary, Earth Observation, Diagnostics, and Data Reports. Internal development labels
+            are not client-facing and will be replaced by final access tiers in the production platform.
+        </p>
+
+        <figure class="dashboard-shot">
+            <img src="images/products/Cwiri-Dashboard_Example2-gimp.png" alt="Anonymised preview of the Cwiri dashboard prototype interface">
+            <figcaption>
+                Prototype dashboard preview with anonymised map context and no client-identifiable project information.
+            </figcaption>
+        </figure>
+
+        <p>
+            The architecture is being built for secure, scalable delivery:
+            site-level access controls, modular panels that can expand as your monitoring programme evolves,
+            and clear reporting views that make results easier to understand and share.
+        </p>
+
+        <div class="btn-row">
+            <a class="btn-primary" href="contact.html">Request a dashboard walkthrough</a>
+        </div>
+    </section>
+
+    <section class="section card">
+        <h2>Frequently asked questions</h2>
+        <p>Some of the most common questions we hear from project managers and land owners before getting started.</p>
+
+        <div class="faq">
+
+            <details class="faq-item">
+                <summary>What is the difference between the monitoring tiers?</summary>
+                <p>
+                    Each tier builds on the last by increasing the density of sensors per management zone,
+                    the depth of Earth Observation integration, and the sophistication of the modelling pipeline.
+                    Bronze provides a reliable baseline with essential water-table data. Silver adds spatial
+                    robustness and EO-supported hydrology surfaces. Gold introduces predictive modelling and
+                    high-confidence, verification-ready outputs. Platinum delivers the highest resolution and
+                    maximum redundancy for complex or high-value projects. The right tier depends on your site's
+                    variability, your reporting requirements, and the level of certainty you need.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Do I need planning permission to install sensors?</summary>
+                <p>
+                    This typically depends on the terms of your land ownership or rental agreement rather than
+                    a formal planning application. Our dipwells are unobtrusive ground-level installations and
+                    in most cases do not require planning permission, but we recommend checking your lease or
+                    management agreement before deployment. We're happy to advise during the scoping stage.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How does data get from the field to the dashboard?</summary>
+                <p>
+                    Sensors transmit readings wirelessly via LoRaWAN — a low-power, long-range network
+                    well-suited to remote landscapes. A gateway installed on or near the site connects to
+                    the wider LoRaWAN infrastructure and forwards data to our processing platform, where it
+                    is validated and made available through your dashboard in near real time.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How long does a typical deployment take?</summary>
+                <p>
+                    Most installations are completed in a single coordinated field campaign lasting one to
+                    two days, depending on site size and accessibility. The scoping phase beforehand ensures
+                    everything is planned and prepared in advance, so the field visit runs efficiently.
+                    Commissioning and dashboard access typically follow within a few days of installation.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What happens if a sensor fails or is damaged?</summary>
+                <p>
+                    We continuously monitor each sensor's status, connectivity, and battery level remotely,
+                    so issues are identified quickly without waiting for a scheduled visit. Routine field
+                    calibration visits also include checks for physical damage to sensors and dipwells.
+                    Where damage has occurred — for example from livestock — we can repair or replace
+                    equipment, and implement protective measures such as fencing where needed. In some cases
+                    this may involve additional cost, which we would discuss with you transparently.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Does this work for woodland carbon projects as well as peatland?</summary>
+                <p>
+                    Yes. While our peatland hydrology monitoring is particularly well developed, Cwiri's
+                    modular framework supports woodland carbon projects too. The sensor types, telemetry
+                    infrastructure, and reporting pipelines are adaptable to the specific MRV requirements
+                    of woodland schemes, including those registered under the Woodland Carbon Code.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How does Cwiri's monitoring support Peatland Code and Woodland Carbon Code verification?</summary>
+                <p>
+                    Our outputs are designed to be verification-ready. We produce structured, auditable
+                    datasets and reporting that align with the evidence requirements of both the Peatland Code
+                    and Woodland Carbon Code. Higher monitoring tiers provide greater spatial confidence and
+                    model-backed carbon assessments, which reduces uncertainty at verification and strengthens
+                    the credibility of your carbon claims.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How many sensors do I need? What level of monitoring do I need?</summary>
+                <p>
+                    The sensor count is flexible and can be tailored to your budget and timeline. More sensors across your site 
+                    will yield comprehensive data faster, while fewer sensors can still build a robust dataset — it simply takes longer 
+                    to achieve spatial coverage. We offer an additional approach: start with a smaller sensor array and relocate sensors 
+                    to new zones once adequate data has been collected in the initial areas. This mobile strategy extends the overall 
+                    acquisition timeline but can reduce upfront costs. During scoping, we'll discuss your budget, timeline, and spatial 
+                    priorities to recommend the approach that works best for your project.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What do we have to do ourselves?</summary>
+                <p>
+                    Your main responsibilities are to provide access and information. We'll ask you to share existing field data (e.g., 
+                    previous water table records, soil surveys, or habitat assessments) and detailed site information (zoning, accessibility, 
+                    landscape features) to inform our scoping. You'll also need to provide site access during our assessment and during 
+                    the installation phase. Cwiri handles the technical implementation — including LoRaWAN gateway installation, sensor 
+                    procurement, configuration, and ongoing data processing. For most projects, your involvement is collaborative: sharing 
+                    data upfront, facilitating site access, and reviewing the dashboard during rollout.
+                </p>
+            </details>
+
+        </div>
+    </section>
+
+    <section class="section card get-started-section" id="how-to-get-started">
+        <span class="process-eyebrow">Client onboarding</span>
+        <h2>How to get started</h2>
+        <p class="process-lead">
+            We keep onboarding simple and practical. In one short conversation, we can scope your site,
+            recommend an appropriate monitoring approach, and outline clear next steps.
+        </p>
+
+        <div class="process-trust" aria-label="What to expect">
+            <span class="process-pill">No-obligation scoping call</span>
+            <span class="process-pill">Clear next steps and indicative costs</span>
+            <span class="process-pill">Approach tailored to your landscape</span>
+        </div>
+
+        <div class="process-steps">
+
+            <div class="process-step">
+                <div class="process-step-number">1</div>
+                <div class="process-step-body">
+                    <h3>Initial call</h3>
+                    <p>
+                        Tell us about your project, site context, and reporting goals. We will quickly confirm
+                        whether Cwiri is the right fit and what level of monitoring makes sense.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-step-number">2</div>
+                <div class="process-step-body">
+                    <h3>Site scoping and design</h3>
+                    <p>
+                        We assess site size, zone layout, accessibility, connectivity, and risk profile to design
+                        the most appropriate monitoring setup for your timeline and budget.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-step-number">3</div>
+                <div class="process-step-body">
+                    <h3>Proposal and sign-off</h3>
+                    <p>
+                        You receive a clear proposal with recommended configuration, delivery plan, and transparent
+                        pricing. Everything is itemised and agreed before any deployment begins.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-step-number">4</div>
+                <div class="process-step-body">
+                    <h3>Deployment and ongoing support</h3>
+                    <p>
+                        Our field team installs and commissions the network, then supports QA/QC, maintenance,
+                        and reporting so you have dependable data throughout your project lifecycle.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="process-cta">
+            <a class="btn-primary" href="contact.html">Book a scoping call</a>
+            <a class="btn-secondary" href="contact.html">Send us your project outline</a>
+        </div>
+        <p class="process-note">Prefer to start by email? Share your site details and we will suggest the best next step.</p>
+    </section>
+
+    </div>
+
+    <footer class="site-footer">
+        &copy; 2025 Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh, Scotland EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
+        &nbsp;|&nbsp; <a href="privacy.html">Privacy &amp; Cookies</a>
+    </footer>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        (function() {
+            const overlay = document.getElementById('lightbox');
+            const lbImg   = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('lightbox-close');
+
+            document.querySelectorAll('.zoomable-img').forEach(function(img) {
+                img.addEventListener('click', function() {
+                    lbImg.src = img.src;
+                    lbImg.alt = img.alt;
+                    overlay.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function closeLightbox() {
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            closeBtn.addEventListener('click', closeLightbox);
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeLightbox();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        })();
+    </script>
 
 </body>
 </html>
