@@ -664,15 +664,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    background: linear-gradient(
-        90deg,
-        #f1f7fc 0%,
-        #f1f7fc 34%,
-        #e4eff8 34%,
-        #e4eff8 68%,
-        #d6e5f2 68%,
-        #d6e5f2 100%
-    );
+    background: linear-gradient(90deg, #f1f7fc 0%, #d6e5f2 100%);
     border: 1px solid #cddced;
     border-radius: 10px;
     padding: 0.45rem 0.7rem;
