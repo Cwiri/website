@@ -347,7 +347,7 @@ input, textarea {
     background-image: linear-gradient(
         rgba(0,0,0,0.35),
         rgba(0,0,0,0.35)
-    ), url('../images/hero-services.png');
+    ), url('../images/hero-services-old.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;

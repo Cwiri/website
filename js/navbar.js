@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Highlight the nav link matching the current page
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             placeholder.querySelectorAll('.nav-links a').forEach(link => {
-                const linkPage = link.getAttribute('href').split('/').pop();
+                const href = link.getAttribute('href');
+                const linkPage = href.split('/').pop().split('#')[0];
                 if (linkPage === currentPage) {
                     link.classList.add('active');
                 }

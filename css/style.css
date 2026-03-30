@@ -4,7 +4,7 @@
 
 :root {
     --cwiri-green: #4C9A6A;
-    --cwiri-green-light: #7BBF8F;
+    --cwiri-green-light: #2ED184;
     --cwiri-green-fig: #0F452D;
     --cwiri-blue: #3A6EA5;
     --cwiri-blue-light: #6FA3D8;
@@ -402,7 +402,7 @@ img {
    ============================================================ */
 
 nav {
-    background: var(--cwiri-green);
+    background: linear-gradient(90deg, #18a15d 0%, #1fbf73 100%);
     box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
@@ -453,6 +453,12 @@ nav {
     align-items: center;
 }
 
+.nav-item {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -474,6 +480,42 @@ nav {
     color: white;
     border-bottom: 2px solid white;
     padding-bottom: 2px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    padding: 0.55rem 0;
+    border-radius: 10px;
+    background: rgba(10, 22, 30, 0.96);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1010;
+}
+
+.submenu a {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.45rem 0.9rem;
+    border-bottom: none;
+}
+
+.submenu a.active {
+    border-bottom: none;
+    color: var(--cwiri-green-light);
+}
+
+.submenu a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+    display: block;
 }
 
 /* ============================================================
@@ -525,7 +567,7 @@ nav {
 }
 
 .hero-services {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero-services.jfif');
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero-services.jfif?v=20260330-1');
 }
 
 .hero-team {
@@ -1051,7 +1093,7 @@ nav {
     width: 96%;
     padding: 4rem 1.5rem;
     margin: 3rem 0;
-    background: linear-gradient(135deg, #0a3d62 0%, #1e6f5c 50%, #06be6b 100%);
+    background: linear-gradient(135deg, #0a3d62 0%, #117a5a 52%, #1fb26b 100%);
     color: white;
     text-align: center;
     border-radius: 12px;
@@ -1313,6 +1355,37 @@ nav {
    ============================================================ */
 
 @media (max-width: 900px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.8rem 1.1rem;
+    }
+
+    .submenu {
+        position: static;
+        display: block;
+        min-width: 0;
+        background: transparent;
+        box-shadow: none;
+        padding: 0.35rem 0 0 0.7rem;
+    }
+
+    .submenu a {
+        padding: 0.25rem 0;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .submenu a:hover {
+        background: transparent;
+        color: var(--cwiri-green-light);
+    }
+
     .pillars-container {
         grid-template-columns: 1fr;
     }
