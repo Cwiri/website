@@ -574,6 +574,14 @@ nav {
     opacity: 1;
 }
 
+.supported-by {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cwiri-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 /* ============================================================
    PILLAR SYSTEM
    ============================================================ */
