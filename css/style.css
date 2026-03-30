@@ -552,13 +552,24 @@ nav {
 .partner-logos {
     padding: 3rem 0;
     background: white;
+    text-align: center;
+}
+
+.supported-by {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cwiri-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    display: block;
 }
 
 .partner-container {
     width: min(1100px, 90%);
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 }
@@ -572,14 +583,6 @@ nav {
 
 .partner-container img:hover {
     opacity: 1;
-}
-
-.supported-by {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--cwiri-text);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 /* ============================================================
