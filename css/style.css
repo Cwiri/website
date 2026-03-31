@@ -563,7 +563,7 @@ nav {
 }
 
 .hero-about {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero-about.png');
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/about-landscapeoverlay.jpg');
 }
 
 .hero-services {
@@ -690,6 +690,30 @@ nav {
     object-fit: cover;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+}
+
+.usp-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.usp-card {
+    border: 1px solid #d8e3ef;
+    border-radius: 12px;
+    padding: 1rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f6fafe 100%);
+}
+
+.usp-card h3 {
+    margin-bottom: 0.45rem;
+    color: var(--cwiri-green-fig);
+    font-size: 1.02rem;
+}
+
+.usp-card p {
+    margin: 0;
 }
 
 /* Dashboard preview */
@@ -1379,6 +1403,10 @@ nav {
     }
 
     .pillars-container {
+        grid-template-columns: 1fr;
+    }
+
+    .usp-grid {
         grid-template-columns: 1fr;
     }
 
