@@ -450,7 +450,8 @@ nav::after {
 .scroll-progress-bar {
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, #d99a1f 0%, #f0c36b 100%);
+    /* background: linear-gradient(90deg, #d99a1f 0%, #f0c36b 100%); */
+    background: linear-gradient(90deg, #1fd973 0%, #6bf072 100%);
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.08s linear;
@@ -538,7 +539,6 @@ nav::after {
 
 .submenu a.active {
     border-bottom: none;
-    color: var(--cwiri-green-light);
 }
 
 .submenu a:hover {
