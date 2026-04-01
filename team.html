@@ -80,9 +80,13 @@
     </div>
 
     <footer class="site-footer">
-        &copy; 2025 Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh, Scotland EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
+        &copy; <span id="current-year"></span> Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh, Scotland EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
         &nbsp;|&nbsp; <a href="privacy.html">Privacy &amp; Cookies</a>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
