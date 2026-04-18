@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cwiri | Thanks</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-package/favicon-96x96.png">
+    <link rel="icon" href="images/favicon-package/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="images/favicon-package/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon-package/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon-package/site.webmanifest">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="refresh" content="12; url=contact.html">
+    <script src="js/navbar.js" defer></script>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="hero hero-contact">
+        <div class="container">
+            <h1>Thank you. Your message has been sent.</h1>
+            <p>We have received your contact request and will be in touch as soon as we can.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section card" style="max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;">
+            <h2>What happens next?</h2>
+            <p>Our team will review your message and reply using the contact details you provided.</p>
+            <p>If you need to send another request now, you can go straight back to the contact form.</p>
+            <p id="redirect-note" aria-live="polite">Returning to the contact form in 12 seconds...</p>
+
+            <div class="btn-row" style="justify-content: center;">
+                <a class="btn-primary" href="contact.html">Send another message</a>
+                <a class="btn-secondary" href="index.html">Back to home</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        &copy; <span id="current-year"></span> Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
+        &nbsp;|&nbsp; <a href="privacy.html">Privacy &amp; Cookies</a>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        (function() {
+            var countdownStart = 12;
+            var redirectNote = document.getElementById('redirect-note');
+            if (!redirectNote) return;
+
+            var countdown = countdownStart;
+            var timer = setInterval(function() {
+                countdown -= 1;
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    redirectNote.textContent = 'Returning to the contact form...';
+                    return;
+                }
+                redirectNote.textContent = 'Returning to the contact form in ' + countdown + ' seconds...';
+            }, 1000);
+        })();
+    </script>
+
+</body>
+</html>
