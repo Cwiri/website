@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cwiri | Contact</title>
+    <title>Cwiri | Contact (Iframe Scroll Test)</title>
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-package/favicon-96x96.png">
     <link rel="icon" href="images/favicon-package/favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="icon" href="images/favicon-package/favicon.ico">
@@ -49,7 +49,7 @@
 
             <!-- Brevo form success URL should be set to /contact-thanks.html in Brevo form settings. -->
 
-            <iframe width="540" height="1000" src="https://858d8474.sibforms.com/serve/MUIFAPLMQ12s3MZ9-2_DRK1duQWM8Y4QX0Rf7Tt4xXoUul0zGtE09LYdX6jPX7D9yca1VGfI4YBn4Csb8Y5tOVCOnWk6MV-WgtYbOeiV-RDbOqv978jMu7VumMjvd25x58dZiv_u827VXx80Q7Sb40Oq0YTjJvedDqeHlMlKEMGLe-jfRQ6z1QGyuMpYyqzBBVb3bEGPaXoO5fw6" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+            <iframe id="brevo-contact-iframe" width="540" height="1000" src="https://858d8474.sibforms.com/serve/MUIFAPLMQ12s3MZ9-2_DRK1duQWM8Y4QX0Rf7Tt4xXoUul0zGtE09LYdX6jPX7D9yca1VGfI4YBn4Csb8Y5tOVCOnWk6MV-WgtYbOeiV-RDbOqv978jMu7VumMjvd25x58dZiv_u827VXx80Q7Sb40Oq0YTjJvedDqeHlMlKEMGLe-jfRQ6z1QGyuMpYyqzBBVb3bEGPaXoO5fw6" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
 
         </section>
 
@@ -141,6 +141,70 @@
                     copyHint.textContent = 'copy failed';
                 }
                 document.body.removeChild(fallback);
+            });
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var contactIframe = document.getElementById('brevo-contact-iframe');
+            if (!contactIframe) return;
+
+            var loadCount = 0;
+            var iframeInteractedAt = 0;
+            var autoScrollCooldownUntil = 0;
+
+            function scrollToIframeTop() {
+                var now = Date.now();
+                if (now < autoScrollCooldownUntil) return;
+                autoScrollCooldownUntil = now + 2500;
+
+                var targetTop = contactIframe.getBoundingClientRect().top + window.pageYOffset - 24;
+                window.scrollTo({
+                    top: Math.max(0, targetTop),
+                    behavior: 'smooth'
+                });
+            }
+
+            contactIframe.addEventListener('load', function() {
+                loadCount += 1;
+                if (loadCount < 2) return;
+
+                scrollToIframeTop();
+            });
+
+            contactIframe.addEventListener('mouseenter', function() {
+                iframeInteractedAt = Date.now();
+            });
+
+            contactIframe.addEventListener('focus', function() {
+                iframeInteractedAt = Date.now();
+            });
+
+            window.addEventListener('message', function(event) {
+                var data = event.data;
+                var text = '';
+
+                if (typeof data === 'string') {
+                    text = data;
+                } else if (data && typeof data === 'object') {
+                    try {
+                        text = JSON.stringify(data);
+                    } catch (err) {
+                        text = '';
+                    }
+                }
+
+                if (!text) return;
+                if (!/(sibforms|brevo|success|submitted|subscription)/i.test(text)) return;
+
+                scrollToIframeTop();
+            });
+
+            window.addEventListener('focus', function() {
+                if (!iframeInteractedAt) return;
+                if (Date.now() - iframeInteractedAt > 5000) return;
+                scrollToIframeTop();
             });
         })();
     </script>

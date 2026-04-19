@@ -42,13 +42,32 @@
             <h2>Unsubscribe</h2>
             <p>If you no longer want to receive these emails, complete the unsubscribe form below.</p>
 
-            <iframe width="540" height="305" src="https://858d8474.sibforms.com/serve/MUIFACkIJKHTrHaDGoAwCUlrRXeTBgaVrsoShOLi5PH4wEIpT0IIp6-Ht90Vz4xNjQJ3v3ic4GkrzRyZ04eY-Q04ufOfSWja9aEB2k7xjwr9aFEBPkiIlgSExuAIug4yjtJvz4rYxquqhKSQT54e2t4C6kP_70qaQvi48c90YtmYKHP32HjTlOgT3ma5JzJy_M84Fg8hQ0NQjTkj" frameborder="0" scrolling="auto" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; max-width: 100%;"></iframe>
+            <iframe width="540" height="305" src="https://858d8474.sibforms.com/serve/MUIFAKiAlBX8TqlwXEIyS5NvQ2PQTnJX9G4t6pESYGEd2aGUvg0B0v5TpgXwVM6ZvJbtga6kIyg_2nkNHyWOb8VWC_x861JMYdQXZHRk2u_Ttc-jF0wB1fRUC7PmOxMjR16HOXJFDi__wJD7ExfyuOCMY31vLWPTOyQbg8ryLLi8U8zbNImR7Q47JIntQKCY57HoBjB8rPip8GmY" frameborder="0" scrolling="auto" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; max-width: 100%;"></iframe>
 
             <div class="btn-row" style="justify-content: center;">
                 <a class="btn-secondary" href="index.html">Back to home</a>
             </div>
         </section>
-    </div>
+
+            <section class="section card" style="max-width: 760px; margin-left: auto; margin-right: auto;">
+                <p>This unsubscribe function will only work if you (or somebody else) had previously used our contact-subscription service through this website. Contact us directly for any other email issues.</p>
+                <h2>Direct Contact</h2>
+                <p>If you prefer to reach us directly, hover to preview, then click to keep it visible and enable copy.</p>
+                <p style="display:flex; align-items:center; gap:0.65rem; flex-wrap:wrap;">
+                    <button id="reveal-email" type="button" class="btn-primary" aria-live="polite">Click to show email address</button>
+                    <span id="copy-wrap" style="display:none; align-items:center; gap:0.35rem;">
+                    <button id="copy-email" type="button" aria-label="Copy email address" title="Copy email address" style="display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; border:0; background:transparent; cursor:pointer; padding:0; color:#3E4857;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <rect x="9" y="9" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                            <rect x="4" y="4" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                        </svg>
+                        <small id="copy-hint" style="color:#555;">click here to copy to your clipboard</small>
+                    </button>
+                    </span>
+                </p>
+                <noscript><p>Please use the form above if JavaScript is disabled.</p></noscript>
+            </section>
+        </div>
 
     <footer class="site-footer">
         &copy; <span id="current-year"></span> Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
@@ -57,6 +76,73 @@
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            (function() {
+                var revealButton = document.getElementById('reveal-email');
+                var copyWrap = document.getElementById('copy-wrap');
+                var copyButton = document.getElementById('copy-email');
+                var copyHint = document.getElementById('copy-hint');
+                if (!revealButton || !copyWrap || !copyButton || !copyHint) return;
+
+                var defaultLabel = 'Click to show email address';
+                var defaultCopyHint = 'click here to copy to your clipboard';
+                var lockedOpen = false;
+
+                function buildEmail() {
+                    var user = ['he', 'llo'].join('');
+                    var host = ['cwiri', 'co', 'uk'].join('.');
+                    return user + '@' + host;
+                }
+
+                function showEmailPreview() {
+                    revealButton.textContent = buildEmail();
+                }
+
+                function hideEmail() {
+                    if (lockedOpen) return;
+                    revealButton.textContent = defaultLabel;
+                    copyWrap.style.display = 'none';
+                    copyHint.textContent = defaultCopyHint;
+                }
+
+                revealButton.addEventListener('mouseenter', showEmailPreview);
+                revealButton.addEventListener('mouseleave', hideEmail);
+                revealButton.addEventListener('focus', showEmailPreview);
+                revealButton.addEventListener('blur', hideEmail);
+
+                revealButton.addEventListener('click', function() {
+                    lockedOpen = true;
+                    showEmailPreview();
+                    copyWrap.style.display = 'inline-flex';
+                    copyHint.textContent = defaultCopyHint;
+                });
+
+                copyButton.addEventListener('click', function() {
+                    var email = buildEmail();
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(email).then(function() {
+                            copyHint.textContent = 'copied';
+                        }).catch(function() {
+                            copyHint.textContent = 'copy failed';
+                        });
+                        return;
+                    }
+                    var fallback = document.createElement('textarea');
+                    fallback.value = email;
+                    fallback.setAttribute('readonly', '');
+                    fallback.style.position = 'absolute';
+                    fallback.style.left = '-9999px';
+                    document.body.appendChild(fallback);
+                    fallback.select();
+                    try {
+                        document.execCommand('copy');
+                        copyHint.textContent = 'copied';
+                    } catch (err) {
+                        copyHint.textContent = 'copy failed';
+                    }
+                    document.body.removeChild(fallback);
+                });
+            })();
     </script>
 
 </body>
