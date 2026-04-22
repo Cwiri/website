@@ -11,6 +11,8 @@ The site includes:
 - **About page** – our origin story, mission, adaptive monitoring framework, and scientific approach.
 - **Tier pages** – descriptions of Bronze, Silver, Gold, and Platinum monitoring tiers.
 - **Contact page** – enquiry form and company details.
+- **Contact thanks page** - post-submit confirmation page used as the Brevo success redirect target.
+- **Unsubscribe page** - embedded Brevo unsubscribe form with a return-to-home action.
 - **Shared UI components** – navigation bar, layout system, and styling.
 
 The design emphasises clarity, scientific rigour, and landscape‑driven visuals, using a combination of abstract UI overlays, gradient bands, and real‑world imagery.
@@ -70,6 +72,22 @@ The site can be deployed to any static hosting provider, including:
 - Azure Static Web Apps  
 
 (Deployment configuration will be added once hosting is chosen.)
+
+## Brevo Contact Form Redirect
+
+The contact form is currently embedded from Brevo in `contact.html`.
+
+Set the Brevo form success redirect URL to:
+
+- `/contact-thanks.html` (production)
+
+This gives users a clear confirmation that their message was sent, and the page then returns them to `contact.html` automatically after a short delay.
+
+## Brevo Unsubscribe Form
+
+The unsubscribe form is embedded in `unsubscribe.html`.
+
+Use this page as the destination for unsubscribe links where you want users to manage email preferences on the website without any automatic redirect.
 
 ## Assets & Licensing
 

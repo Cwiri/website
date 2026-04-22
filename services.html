@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Cwiri | Products & Services</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-package/favicon-96x96.png">
+    <link rel="icon" href="images/favicon-package/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="images/favicon-package/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon-package/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon-package/site.webmanifest">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css?v=20260330-1">
     <script src="js/navbar.js" defer></script>
+    <script>
+        (function(d, w, c) {
+            w.BrevoConversationsID = '68aac71d5c19458099073722';
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'BrevoConversations');
+    </script>
 </head>
 <body>
 
@@ -146,70 +165,7 @@
         </div>
     </section> -->
 
-    <section class="section card">
-        <h2>Assurance tiers</h2>
-        <p>
-            Our modular monitoring framework offers increasing levels of assurance, from foundational insights
-            to high-confidence, model-backed verification.
-        </p>
-
-        <div class="product-graphic-block">
-            <figure class="product-figure">
-                <img src="images/products/product-assurance.png" alt="Assurance tiers from Bronze to Gold">
-                <figcaption>Higher tiers combine more data sources and validation to increase assurance.</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <section class="section card">
-        <h2>How higher tiers improve data assurance</h2>
-        <p>
-            As monitoring tiers increase, so does the spatial resolution and density of data.  
-            This allows our models to capture natural variation more accurately, improving predictions 
-            of environmental metrics, and subsequently the calculated carbon balances and success of any planting/restoration.
-        </p>
-
-        <div class="product-graphic-split">
-            
-            <!-- Graphic (Silver tier example, but used conceptually) -->
-            <figure class="product-figure">
-                <img src="images/products/product-spatial-density.svg"
-                    class="zoomable-img"
-                    alt="Comparison of sparse and dense sensor coverage across a landscape feature"
-                    title="Click to enlarge">
-                <figcaption>
-                    Higher tiers provide finer spatial resolution, capturing more of the landscape's 
-                    natural variability and improving model accuracy.
-                    <span class="zoom-hint">Click image to enlarge</span>
-                </figcaption>
-            </figure>
-
-            <!-- Explanation block -->
-            <div class="product-copy">
-                <h3>Why resolution matters</h3>
-                <ul>
-                    <li><strong>Better representation of natural variation:</strong> 
-                        Higher density data captures microtopography, hydrological patterns, 
-                        and vegetation differences that lower resolution approaches miss.</li>
-
-                    <li><strong>Improved model calibration:</strong> 
-                        More detailed inputs reduce uncertainty and allow models to reflect 
-                        real‑world behaviour more closely.</li>
-
-                    <li><strong>Higher confidence in predictions:</strong> 
-                        Finer resolution improves estimates of water table depth, 
-                        emissions, and restoration impact.</li>
-
-                    <li><strong>Stronger assurance:</strong> 
-                        As resolution increases, so does the reliability of MRV outputs, 
-                        supporting higher‑tier verification.</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section card">
+    <section class="section card" id="tier-summary">
         <h2>Tier summary</h2>
         <p>
             Choose the tier that matches your project’s maturity, monitoring budget, risk profile, and reporting requirements.
@@ -224,30 +180,81 @@
     </section>
 
     <!-- Detailed Tier Descriptions -->
-    <section class="section card">
+    <section class="section card" id="faq">
         <h2>What Each Tier Provides</h2>
 
-        <h3>Bronze — Essential Monitoring</h3>
+        <div class="tier-comparison-wrap" aria-label="Tier comparison table">
+            <table class="tier-comparison-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col" class="tier-bronze">Bronze</th>
+                        <th scope="col" class="tier-silver">Silver</th>
+                        <th scope="col" class="tier-gold">Gold</th>
+                        <th scope="col" class="tier-platinum">Platinum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">One-stop Data Collection</th>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Expert Site Assessment</th>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Integrated EO</th>
+                        <td></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Adaptive Monitoring &amp; Modelling</th>
+                        <td></td>
+                        <td></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Advanced Carbon Monitoring & Assessment</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="tier-tick" aria-label="Included">&#10003;</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="tier-heading tier-bronze">Bronze — Essential Monitoring</h3>
         <p>
             A cost-efficient baseline suitable for projects seeking foundational environmental metric monitoring (e.g. one or two parameters) across all management zones.  
             Bronze provides continuous data collection with basic redundancy, ensuring at least one reliable data stream per zone.  
             Ideal for early stage projects or landscapes with lower variability.
         </p>
 
-        <h3>Silver — Enhanced Coverage</h3>
+        <h3 class="tier-heading tier-silver">Silver — Enhanced Coverage</h3>
         <p>
             Silver increases spatial representation and statistical robustness with additional sensors per zone.  
             Limited EO analysis introduced to support greater understanding of landscapes spatial variation, improving output accuracy and sensor placement.  
             A strong balance between cost and confidence.
         </p>
 
-        <h3>Gold — High‑Assurance MRV</h3>
+        <h3 class="tier-heading tier-gold">Gold — High‑Assurance Monitoring</h3>
         <p>
             Gold delivers high density sensor networks and more sensor types, predictive modelling pipelines, more EO analyses, and verification ready outputs.  
-            This tier significantly reduces risk of data gaps and provides high confidence carbon assessments suitable for MRV frameworks, by using consensus of different environmental metrics.
+            This tier significantly reduces risk of data gaps and provides high confidence carbon assessments, by using consensus of different environmental metrics.
         </p>
 
-        <h3>Platinum — Comprehensive Spatial Intelligence</h3>
+        <h3 class="tier-heading tier-platinum">Platinum — Comprehensive Spatial Intelligence</h3>
         <p>
             Platinum offers the most detailed monitoring package, with very high spatial resolution and maximum redundancy.  
             Advanced EO integration and modelling provide the highest certainty in hydrology and carbon estimates.  
@@ -255,38 +262,75 @@
         </p>
     </section>
 
-    <section class="section card dashboard-preview" id="dashboard-preview">
-        <h2>Dashboard Platform (Prototype)</h2>
+    <section class="section card dashboard-capabilities" id="dashboard">
+        <h2>Dashboard Platform</h2>
         <p>
-            Alongside field deployment and modelling, Cwiri is developing a client-facing dashboard platform.
-            The current version is an active prototype, designed to test workflow, usability, and panel structure
-            before first product release.
-        </p>
-        <p>
-            To protect partner confidentiality and verbal data-sharing agreements, we only use anonymised
-            prototype screenshots where locations and project identifiers are not determinable.
-        </p>
-        <p>
-            The current prototype is organised into top-level tabs including Study Site, Live Sensors,
-            Sensor Summary, Earth Observation, Diagnostics, and Data Reports. Internal development labels
-            are not client-facing and will be replaced by final access tiers in the production platform.
+            The client dashboard turns site data into clear, actionable insight. As tiers increase, the dashboard
+            experience becomes more sophisticated and reflects the level of service selected.
         </p>
 
-        <figure class="dashboard-shot">
-            <img src="images/products/Cwiri-Dashboard_Example2-gimp.png" alt="Anonymised preview of the Cwiri dashboard prototype interface">
-            <figcaption>
-                Prototype dashboard preview with anonymised map context and no client-identifiable project information.
-            </figcaption>
-        </figure>
+        <div class="dashboard-feature-grid">
+            <article class="dashboard-feature-card">
+                <div class="dashboard-feature-head">
+                    <div class="dashboard-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <circle cx="12" cy="12" r="1.7"></circle>
+                            <path d="M8.8 15.2a4.5 4.5 0 0 1 0-6.4"></path>
+                            <path d="M15.2 8.8a4.5 4.5 0 0 1 0 6.4"></path>
+                            <path d="M6 18a8.5 8.5 0 0 1 0-12"></path>
+                            <path d="M18 6a8.5 8.5 0 0 1 0 12"></path>
+                        </svg>
+                    </div>
+                    <h3>Live Data Fields</h3>
+                </div>
+                <p>View live sensor values, telemetry status, and field conditions in one place.</p>
+            </article>
 
-        <p>
-            The architecture is being built for secure, scalable delivery:
-            site-level access controls, modular panels that can expand as your monitoring programme evolves,
-            and clear reporting views that make results easier to understand and share.
-        </p>
+            <article class="dashboard-feature-card">
+                <div class="dashboard-feature-head">
+                    <div class="dashboard-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M4 19h16"></path>
+                            <path d="M6 16l4-5 3 3 5-6"></path>
+                            <circle cx="6" cy="16" r="1"></circle>
+                            <circle cx="10" cy="11" r="1"></circle>
+                            <circle cx="13" cy="14" r="1"></circle>
+                            <circle cx="18" cy="8" r="1"></circle>
+                        </svg>
+                    </div>
+                    <h3>Interactive Plots</h3>
+                </div>
+                <p>Explore trends through clear, interactive visualisations designed for fast interpretation.</p>
+            </article>
 
-        <div class="btn-row">
-            <a class="btn-primary" href="contact.html">Request a dashboard walkthrough</a>
+            <article class="dashboard-feature-card">
+                <div class="dashboard-feature-head">
+                    <div class="dashboard-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M8 3h6l4 4v14H8z"></path>
+                            <path d="M14 3v4h4"></path>
+                            <path d="M10 12h6"></path>
+                            <path d="M10 15h6"></path>
+                        </svg>
+                    </div>
+                    <h3>Reports and Exports</h3>
+                </div>
+                <p>Access reporting outputs and evidence packs aligned with assurance and verification needs.</p>
+            </article>
+
+            <article class="dashboard-feature-card">
+                <div class="dashboard-feature-head">
+                    <div class="dashboard-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M12 4l8 4-8 4-8-4 8-4z"></path>
+                            <path d="M4 12l8 4 8-4"></path>
+                            <path d="M4 16l8 4 8-4"></path>
+                        </svg>
+                    </div>
+                    <h3>Tier-Aligned Access</h3>
+                </div>
+                <p>Features scale with your chosen tier, from essential views to advanced analysis capability.</p>
+            </article>
         </div>
     </section>
 
@@ -310,7 +354,7 @@
             </details>
 
             <details class="faq-item">
-                <summary>Do I need planning permission to install sensors?</summary>
+                <summary>Do I need permission to install sensors?</summary>
                 <p>
                     This typically depends on the terms of your land ownership or rental agreement rather than
                     a formal planning application. Our dipwells are unobtrusive ground-level installations and
@@ -356,7 +400,7 @@
                 <p>
                     Yes. While our peatland hydrology monitoring is particularly well developed, Cwiri's
                     modular framework supports woodland carbon projects too. The sensor types, telemetry
-                    infrastructure, and reporting pipelines are adaptable to the specific MRV requirements
+                    infrastructure, and reporting pipelines are adaptable to the specific monitoring requirements
                     of woodland schemes, including those registered under the Woodland Carbon Code.
                 </p>
             </details>
@@ -364,7 +408,7 @@
             <details class="faq-item">
                 <summary>How does Cwiri's monitoring support Peatland Code and Woodland Carbon Code verification?</summary>
                 <p>
-                    Our outputs are designed to be verification-ready. We produce structured, auditable
+                    We produce structured, auditable
                     datasets and reporting that align with the evidence requirements of both the Peatland Code
                     and Woodland Carbon Code. Higher monitoring tiers provide greater spatial confidence and
                     model-backed carbon assessments, which reduces uncertainty at verification and strengthens
@@ -377,10 +421,10 @@
                 <p>
                     The sensor count is flexible and can be tailored to your budget and timeline. More sensors across your site 
                     will yield comprehensive data faster, while fewer sensors can still build a robust dataset — it simply takes longer 
-                    to achieve spatial coverage. We offer an additional approach: start with a smaller sensor array and relocate sensors 
-                    to new zones once adequate data has been collected in the initial areas. This mobile strategy extends the overall 
-                    acquisition timeline but can reduce upfront costs. During scoping, we'll discuss your budget, timeline, and spatial 
-                    priorities to recommend the approach that works best for your project.
+                    to achieve spatial coverage. Our adaptive monitoring approach maximises the value of the sensors installed, therefore
+                    you should start with a practical amount of sensors and relocate sensors to new zones once adequate data has been collected 
+                    in the initial areas. This mobile strategy extends the overall acquisition timeline but can reduce upfront costs. 
+                    During scoping, we'll discuss your budget, timeline, and spatial priorities to recommend the approach that works best for your project.
                 </p>
             </details>
 
@@ -471,7 +515,7 @@
     </div>
 
     <footer class="site-footer">
-        &copy; 2025 Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh, Scotland EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
+        &copy; <span id="current-year"></span> Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
         &nbsp;|&nbsp; <a href="privacy.html">Privacy &amp; Cookies</a>
     </footer>
 
@@ -509,6 +553,8 @@
                 if (e.key === 'Escape') closeLightbox();
             });
         })();
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 
 </body>

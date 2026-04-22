@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Cwiri | Home</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-package/favicon-96x96.png">
+    <link rel="icon" href="images/favicon-package/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="images/favicon-package/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon-package/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon-package/site.webmanifest">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Crobel:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="js/navbar.js" defer></script>
+    <script>
+        (function(d, w, c) {
+            w.BrevoConversationsID = '68aac71d5c19458099073722';
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'BrevoConversations');
+    </script>
 </head>
 <body>
 
@@ -14,9 +33,8 @@
     <section class="hero hero-home">
         <div class="container">
             <img src="images/cwiri_logo_green_outline1.png" alt="Cwiri" class="hero-brand-logo">
-            <!-- <h1>Scalable monitoring and modelling for peatland and woodland carbon projects.</h1> -->
-            <h1>Modular, scalable, and adaptive monitoring for carbon projects</h1>
-            <p>Science-led monitoring, reporting, and verification (MRV) you can trust, no matter the budget.</p>
+            <h1>Scalable and adaptive monitoring for peatland and woodland carbon projects.</h1>
+            <p>Affordable, science-based monitoring you can trust.</p>
             <div class="btn-row">
                 <a class="btn-primary" href="contact.html">Book a Call</a>
             </div>
@@ -33,72 +51,49 @@
 
     <div class="container home-main">
 
-        <!-- Mission Statement -->
-        <section class="mission-band section">
+        <section class="mission-band section" id="mission">
             <div class="mission-inner">
                 <h2>Our Mission</h2>
                 <p>
-                    To enable every peatland and woodland carbon project to have access to scientifically backed monitoring methodologies, regardless of budget.
+                    To enable every peatland and woodland carbon project to have access to scientifically backed monitoring methodologies.
                 </p>
             </div>
         </section>
 
-        <section class="section card pillars-section">
-            <div class="pillars-container">
-
-                <!-- Monitoring -->
-                <div class="pillar-card">
-                    <div class="pillar-image">
-                        <img src="images/graphics/home-monitoring.jpg" alt="Monitoring">
+        <section class="section card usp-home" id="unique-selling-points">
+            <h2>Why Clients Choose Cwiri</h2>
+            <div class="usp-grid">
+                <article class="usp-card usp-point-card">
+                    <div class="usp-point-heading">
+                        <span class="usp-point-number">01</span>
+                        <h3>Tiered for Every Project</h3>
                     </div>
-                    <div class="pillar-content">
-                        <div class="pillar-heading">
-                            <div class="pillar-icon"></div>
-                            <h3>Monitoring</h3>
-                        </div>
-                        <p>On-ground instrumentation and Earth Observation provide continuous, scalable insights into environmental metrics related to GHG balance, habitat condition, and restoration success.</p>
+                    <p>Tiered options match your budget, project stage, and assurance requirements, so you only pay for what your site needs.</p>
+                </article>
+                <article class="usp-card usp-point-card">
+                    <div class="usp-point-heading">
+                        <span class="usp-point-number">02</span>
+                        <h3>Adaptive and Cost-Efficient</h3>
                     </div>
-                </div>
-
-                <!-- Modelling -->
-                <div class="pillar-card">
-                    <div class="pillar-image">
-                        <img src="images/graphics/home-modelling2.jpg" alt="Modelling">
+                    <p>Telemetered sensor deployment and adaptive monitoring allow relocation over time, improving coverage while keeping resources focused and efficient.</p>
+                </article>
+                <article class="usp-card usp-point-card">
+                    <div class="usp-point-heading">
+                        <span class="usp-point-number">03</span>
+                        <h3>Scientific Expertise</h3>
                     </div>
-                    <div class="pillar-content">
-                        <div class="pillar-heading">
-                            <div class="pillar-icon"></div>
-                            <h3>Modelling</h3>
-                        </div>
-                        <p>Validated carbon and hydrological models quantify emissions, restoration impact, and long-term site trajectories.</p>
-                    </div>
-                </div>
-
-                <!-- Reporting -->
-                <div class="pillar-card">
-                    <div class="pillar-image">
-                        <img src="images/graphics/home-reporting3.png" alt="Reporting">
-                    </div>
-                    <div class="pillar-content">
-                        <div class="pillar-heading">
-                            <div class="pillar-icon"></div>
-                            <h3>Reporting</h3>
-                        </div>
-                        <p>Dashboards and reporting outputs provide transparent, repeatable reporting aligned with the Peatland Code and Woodland Carbon Code.</p>
-                    </div>
-                </div>
-
+                    <p>Our team works at the cutting edge of peatland hydrology and carbon science, translating robust methods into practical field delivery.</p>
+                </article>
             </div>
         </section>
 
 
-        <section class="section card">
+        <section class="section card" id="what-we-deliver">
             <h2>What We Deliver</h2>
             <p>
-                Cwiri provides tiered monitoring services tailored to your project that matches the budget and level
-                of assurance you desire. Our adaptive framework ensures your monitoring evolves with the changing
-                conditions, circumstances, and priorities of your project. Our approach maximises the cost
-                effectiveness of your data, and makes sure you only pay for what's needed.
+                Cwiri delivers tiered, adaptive monitoring services built around telemetered sensors, quality-assured data,
+                and transparent reporting. Every setup is matched to your project budget ambitions, site conditions,
+                and monitoring priorities.
             </p>
 
             <div class="image-wrapper">
@@ -106,40 +101,57 @@
             </div>
         </section>
 
-        <section class="section card">
+        <section class="section card home-how-it-works" id="how-it-works">
             <h2>How It Works</h2>
-            <ul>
-                <li><strong>Measure:</strong> Continuous environmental conditions using robust sensing instrumentation.</li>
-                <li><strong>Model:</strong> Carbon emissions and hydrological change using validated ecological models and EO data.</li>
-                <li><strong>Verify:</strong> Transparent, repeatable outputs aligned with the Woodland Carbon Code and Peatland Code.</li>
-                <li><strong>Improve:</strong> Adaptive monitoring that re-evaluates sensor placement and model inputs over time.</li>
-            </ul>
-        </section>
-
-        <section class="section card start-signpost">
-            <span class="start-eyebrow">Ready to plan your monitoring?</span>
-            <h2>Get a practical project recommendation in one short call</h2>
-            <p>
-                Tell us about your site, timeline, and reporting goals, and we will recommend a monitoring setup
-                that balances confidence, budget, and delivery speed.
-            </p>
-
-            <div class="start-benefits" aria-label="What to expect">
-                <div class="start-benefit">No-obligation scoping call</div>
-                <div class="start-benefit">Clear next steps and indicative costs</div>
-                <div class="start-benefit">Tailored approach for your landscape</div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <div class="process-step-body">
+                        <h3>Assessment</h3>
+                        <p>We assess your site context, goals, and existing data to define what level of monitoring and assurance is needed.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <div class="process-step-body">
+                        <h3>Tiered Options for Clients</h3>
+                        <p>We recommend the most suitable tier so delivery aligns with your budget ambition, timeline, and reporting requirements.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <div class="process-step-body">
+                        <h3>Deployment of Telemetered Sensors</h3>
+                        <p>Our field team deploys robust sensor networks designed for remote landscapes, with flexible deployment where it improves value.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <div class="process-step-body">
+                        <h3>QA of Data and Analysis</h3>
+                        <p>We run structured QA/QC and analysis workflows to produce dependable datasets and model outputs you can trust.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">5</div>
+                    <div class="process-step-body">
+                        <h3>Reporting</h3>
+                        <p>You receive transparent, repeatable reporting aligned with project management and verification expectations.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">6</div>
+                    <div class="process-step-body">
+                        <h3>Adaptive Monitoring Refinement</h3>
+                        <p>As more data comes in, we iteratively refine sensor placement, model inputs, and analytics to keep outputs accurate and cost-efficient as over time.</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="btn-row start-actions">
-                <a class="btn-primary" href="contact.html">Book a scoping call</a>
-                <a class="btn-secondary" href="services.html#how-to-get-started">View the 4-step process</a>
-            </div>
-
-            <p class="start-note">Prefer email first? Share your project outline and we will respond with suggested options.</p>
         </section>
 
     </div>
 
+    <!-- Sponsor logos temporarily hidden pending permission to display external brand assets.
     <section class="partner-logos">
         <p class="supported-by">Supported by</p>
         <div class="partner-container">
@@ -148,11 +160,16 @@
             <img src="images/logos/civTech.png" alt="Partner 3">
         </div>
     </section>
+    -->
 
     <footer class="site-footer">
-        &copy; 2025 Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh, Scotland EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
+        &copy; <span id="current-year"></span> Cwiri Ltd. All rights reserved. Registered in Scotland as Company Number SC859594. Registered Office address: 5 South Charlotte Street, Edinburgh EH2 4AN. VAT Registration: 503 6384 07. ICO Registration: ZC052947
         &nbsp;|&nbsp; <a href="privacy.html">Privacy &amp; Cookies</a>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
