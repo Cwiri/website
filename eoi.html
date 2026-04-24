@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression of Interest - Demonstrator Sites | Cwiri</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-package-just-the-C/favicon-96x96.png">
+    <link rel="icon" href="images/favicon-package-just-the-C/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="images/favicon-package-just-the-C/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon-package-just-the-C/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon-package-just-the-C/site.webmanifest">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crobel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/navbar.js" defer></script>
+    <script>
+        (function(d, w, c) {
+            w.BrevoConversationsID = '68aac71d5c19458099073722';
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'BrevoConversations');
+    </script>
+    <style>
+        /* EOI-specific styles */
+        .eoi-intro {
+            background: linear-gradient(135deg, rgba(76, 154, 106, 0.1) 0%, rgba(62, 110, 165, 0.1) 100%);
+            border-radius: var(--radius);
+            padding: var(--space-l);
+            margin-bottom: var(--space-l);
+        }
+
+        .eoi-intro h1 {
+            margin-bottom: var(--space-m);
+            color: var(--cwiri-dark);
+        }
+
+        .eoi-intro p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--cwiri-text);
+        }
+
+        .eoi-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .eoi-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+            padding: var(--space-l) 0;
+        }
+
+        /* Responsive iframe container */
+        .form-container {
+            margin-bottom: var(--space-l);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .form-container iframe {
+            width: 100%;
+            height: auto;
+            min-height: 3000px;
+            border: none;
+            display: block;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .eoi-intro {
+                padding: var(--space-m);
+            }
+
+            .form-container iframe {
+                min-height: 2500px;
+            }
+        }
+
+        /* Info section below form */
+        .eoi-footer {
+            background: var(--cwiri-grey);
+            border-top: 1px solid #e0e0e0;
+            padding: var(--space-l) 0;
+            margin-top: var(--space-l);
+        }
+
+        .eoi-footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .eoi-footer a {
+            color: var(--cwiri-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .eoi-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="eoi-container">
+
+        <section class="eoi-intro">
+            <h1>Expression of Interest: Demonstrator Sites</h1>
+            
+            <h2 style="font-size: 1.3rem; margin-top: var(--space-m); margin-bottom: 1rem; color: var(--cwiri-green);">Who We Are</h2>
+            <p>
+                Cwiri focuses on building science-led monitoring, reporting, and verification (MRV) systems that are transparent, 
+                scalable, and adaptive to the changing circumstances and requirements for each site. We're a start-up born from the 
+                UKCEH peatland science team, founded because we recognised a sector-wide need for robust, scalable, and cost-accessible 
+                monitoring solutions.
+            </p>
+
+            <p>
+                Our team came together through CivTech Challenge 10.6, working alongside the Woodland Carbon Code and Peatland Code 
+                to develop new monitoring and verification solutions that deliver higher assurance than current approaches, apply 
+                across different project types, and remain accessible to all projects regardless of budget.
+            </p>
+
+            <h2 style="font-size: 1.3rem; margin-top: var(--space-m); margin-bottom: 1rem; color: var(--cwiri-green);">Our Approach</h2>
+            <p>
+                We utilise a tiered approach to monitoring so solutions match your project budget, stage, and assurance requirements. 
+                You only pay for what your site needs, and the level of assurance you want. We focus on telemetered sensor deployment 
+                and adaptive monitoring that enables sensor relocation over time, improving coverage while keeping resources focused and efficient.
+            </p>
+
+            <p>
+                Drawing on decades of combined experience in land-based research, we deliver a layered sensing and reporting workflow 
+                that combines low-cost in situ sensors with Earth Observation (drone and satellite) data to provide detailed outputs 
+                and recommendations.
+            </p>
+
+            <h2 style="font-size: 1.3rem; margin-top: var(--space-m); margin-bottom: 1rem; color: var(--cwiri-green);">Want to Be a Demonstrator Site?</h2>
+            <p>
+                We are now in a 12-month pre-commercial stage with the Woodland Carbon Code and Peatland Code to refine and demonstrate 
+                the capability of our solutions. As part of this work, we are seeking early-onboarding demonstrator sites to help validate 
+                and refine our modelling, reporting, and verification pipeline.
+            </p>
+
+            <p>
+                <strong>Selected projects will:</strong>
+            </p>
+            <ul>
+                <li>Work with us to test the full workflow—from data collection and sensor deployment to modelling outputs and dashboard visualisation</li>
+                <li>Receive free access to our research-grade Earth Observation and modelling outputs during the trial</li>
+                <li>Benefit from in-kind support (negotiated on a per-project basis) to assist with installation, monitoring, and operational costs</li>
+            </ul>
+
+            <p>
+                If you have a restoration site whose progress you would like to better understand, and an interest in helping develop 
+                new monitoring technologies for Peatland and Woodland Carbon Code projects, please complete the Expression of Interest below.
+            </p>
+
+            <p style="margin-top: var(--space-m); font-style: italic; color: var(--cwiri-green); font-weight: 500;">
+                This EOI helps us understand site suitability, logistics, and your capacity to participate in monitoring and co-development activities.
+            </p>
+        </section>
+
+        <section class="form-container">
+            <iframe 
+                src="https://forms.office.com/e/CCiYCgzZrB" 
+                title="Expression of Interest: Cwiri Early Onboarding for Demonstrator Sites"
+                allowfullscreen
+                webkitallowfullscreen
+                mozallowfullscreen>
+            </iframe>
+        </section>
+
+    </div>
+
+    <footer class="eoi-footer">
+        <div class="eoi-container">
+            <h3 style="margin-top: 0;">Get in Touch</h3>
+            <p>
+                <strong>Email:</strong>
+                <button id="reveal-email" type="button" class="btn-primary" aria-live="polite" style="margin-left: 0.5rem;">Click to show email address</button>
+                <span id="copy-wrap" style="display:none; align-items:center; gap:0.35rem;">
+                <button id="copy-email" type="button" aria-label="Copy email address" title="Copy email address" style="display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; border:0; background:transparent; cursor:pointer; padding:0; color:#3E4857;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <rect x="9" y="9" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                        <rect x="4" y="4" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                    </svg>
+                    <small id="copy-hint" style="color:#555;">click here to copy to your clipboard</small>
+                </button>
+                </span>
+            </p>
+            <noscript><p>Please enable JavaScript to view email address.</p></noscript>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic iframe height adjustment
+        function adjustIframeHeight() {
+            const iframe = document.querySelector('.form-container iframe');
+            if (!iframe) return;
+
+            // Try to get the actual content height from the iframe
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (iframeDoc && iframeDoc.body) {
+                    const height = iframeDoc.body.scrollHeight;
+                    iframe.style.height = (height + 50) + 'px';
+                }
+            } catch (e) {
+                // Cross-origin, fallback to default heights
+                // This is expected for Microsoft Forms
+                const viewportHeight = window.innerHeight;
+                iframe.style.minHeight = Math.max(3000, viewportHeight * 1.5) + 'px';
+            }
+        }
+
+        // Adjust on load and window resize
+        window.addEventListener('load', adjustIframeHeight);
+        window.addEventListener('resize', adjustIframeHeight);
+
+        // Try to adjust after a delay to allow iframe to load
+        setTimeout(adjustIframeHeight, 2000);
+
+        // Email reveal and copy functionality
+        (function() {
+            var revealButton = document.getElementById('reveal-email');
+            var copyWrap = document.getElementById('copy-wrap');
+            var copyButton = document.getElementById('copy-email');
+            var copyHint = document.getElementById('copy-hint');
+            if (!revealButton || !copyWrap || !copyButton || !copyHint) return;
+
+            var defaultLabel = 'Click to show email address';
+            var defaultCopyHint = 'click here to copy to your clipboard';
+            var lockedOpen = false;
+
+            function buildEmail() {
+                var user = ['he', 'llo'].join('');
+                var host = ['cwiri', 'co', 'uk'].join('.');
+                return user + '@' + host;
+            }
+
+            function showEmailPreview() {
+                var email = buildEmail();
+                revealButton.textContent = email;
+            }
+
+            function hideEmail() {
+                if (lockedOpen) return;
+                revealButton.textContent = defaultLabel;
+                copyWrap.style.display = 'none';
+                copyHint.textContent = defaultCopyHint;
+            }
+
+            revealButton.addEventListener('mouseenter', showEmailPreview);
+            revealButton.addEventListener('mouseleave', hideEmail);
+            revealButton.addEventListener('focus', showEmailPreview);
+            revealButton.addEventListener('blur', hideEmail);
+
+            revealButton.addEventListener('click', function() {
+                lockedOpen = true;
+                showEmailPreview();
+                copyWrap.style.display = 'inline-flex';
+                copyHint.textContent = defaultCopyHint;
+            });
+
+            copyButton.addEventListener('click', function() {
+                var email = buildEmail();
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(email).then(function() {
+                        copyHint.textContent = 'copied';
+                    }).catch(function() {
+                        copyHint.textContent = 'copy failed';
+                    });
+                    return;
+                }
+
+                var fallback = document.createElement('textarea');
+                fallback.value = email;
+                fallback.setAttribute('readonly', '');
+                fallback.style.position = 'absolute';
+                fallback.style.left = '-9999px';
+                document.body.appendChild(fallback);
+                fallback.select();
+                try {
+                    document.execCommand('copy');
+                    copyHint.textContent = 'copied';
+                } catch (err) {
+                    copyHint.textContent = 'copy failed';
+                }
+                document.body.removeChild(fallback);
+            });
+        })();
+    </script>
+
+</body>
+</html>
