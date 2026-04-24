@@ -413,6 +413,11 @@ nav {
     top: 0;
     z-index: 1000;
     overflow: visible;
+    transition: transform 0.3s ease;
+}
+
+nav.nav-hidden {
+    transform: translateY(-100%);
 }
 
 nav::before {
@@ -479,6 +484,38 @@ nav::after {
     font-weight: 700;
     font-family: "Sora", "Manrope", sans-serif;
     font-size: 1.2rem;
+}
+
+/* Hamburger toggle button — hidden on desktop */
+.nav-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.45rem;
+    color: white;
+    position: relative;
+    z-index: 3;
+    line-height: 0;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.nav-hamburger svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+.nav-hamburger:focus-visible {
+    outline: 2px solid var(--cwiri-green-light);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav {
+        transition: none;
+    }
 }
 
 .nav-links {
@@ -1641,25 +1678,70 @@ nav::after {
    MEDIA QUERIES
    ============================================================ */
 
-@media (max-width: 900px) {
+/* ── Mobile hamburger nav (≤860px) ────────────────────────────────── */
+@media (max-width: 860px) {
+    .nav-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .nav-container {
-        flex-direction: column;
-        gap: 0.8rem;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
     }
 
+    /* Menu closed by default */
     .nav-links {
-        flex-wrap: wrap;
-        gap: 0.8rem 1.1rem;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        padding: 0.5rem 0 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        /* Sit below the logo/hamburger row */
+        order: 3;
     }
 
+    /* Menu open state */
+    nav.nav-open .nav-links {
+        display: flex;
+    }
+
+    /* Make the nav-container a grid-like wrapper so links drop below */
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .nav-links > .nav-item,
+    .nav-links > a {
+        width: 100%;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links > a:last-child,
+    .nav-links > .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        font-size: 1.05rem;
+        display: block;
+        white-space: normal;
+    }
+
+    /* Submenus: always visible and indented on mobile */
     .submenu {
         position: static;
         display: block;
         min-width: 0;
         background: transparent;
         box-shadow: none;
-        padding: 0.35rem 0 0 0.7rem;
+        padding: 0.35rem 0 0 0.9rem;
     }
 
     .submenu a {
@@ -1673,6 +1755,37 @@ nav::after {
         color: var(--cwiri-green-light);
     }
 
+    .logo-img {
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 40px;
+    }
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+/* ── Tablet hero compaction (≤768px) ───────────────────────────────── */
+@media (max-width: 768px) {
+    .hero {
+        padding: 7rem 1.25rem 3rem 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-brand-logo {
+        width: min(260px, 60vw);
+    }
+}
+
+/* ── Layout grid collapses (≤900px) ────────────────────────────────── */
+@media (max-width: 900px) {
     .pillars-container {
         grid-template-columns: 1fr;
     }
@@ -1725,16 +1838,21 @@ nav::after {
         height: 110px;
     }
 
+    /* Aggressive mobile hero: logo already visible in nav bar */
     .hero {
-        padding: 6rem 1rem 3rem 1rem;
+        padding: 5.5rem 1rem 2rem 1rem;
+    }
+
+    .hero-brand-logo {
+        display: none;
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.45rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.92rem;
     }
 }
 
